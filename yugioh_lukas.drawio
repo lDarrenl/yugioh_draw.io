@@ -1,0 +1,245 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36 OPR/114.0.0.0" version="24.9.1">
+  <diagram name="Page-1" id="_LlC5W7CyHL8jPYRGRaq">
+    <mxGraphModel dx="2333" dy="1269" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2" value="Carte" style="swimlane" parent="1" vertex="1">
+          <mxGeometry x="50" y="50" width="180" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="3" value="ID_Carte (PK)&#xa;Nom&#xa;Niveau&#xa;ATK&#xa;DEF&#xa;Effet&#xa;Image&#xa;ID_Type (FK)" parent="2" vertex="1">
+          <mxGeometry y="30" width="180" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="4" value="Type_Carte" style="swimlane" parent="1" vertex="1">
+          <mxGeometry x="300" y="50" width="150" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="5" value="ID_Type (PK)&#xa;Nom_Type" parent="4" vertex="1">
+          <mxGeometry y="30" width="150" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="6" value="Membre" style="swimlane" parent="1" vertex="1">
+          <mxGeometry x="50" y="435" width="150" height="150" as="geometry">
+            <mxRectangle x="50" y="435" width="80" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7" value="ID_Membre (PK)&#xa;Pseudo&#xa;Email&#xa;MotDePasse&#xa;Date_Inscription" parent="6" vertex="1">
+          <mxGeometry y="25" width="150" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="8" value="Deck" style="swimlane" parent="1" vertex="1">
+          <mxGeometry x="410" y="435" width="150" height="150" as="geometry">
+            <mxRectangle x="410" y="435" width="70" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9" value="ID_Deck (PK)&#xa;Nom_Deck&#xa;ID_Membre (FK)&#xa;Date_Creation" parent="8" vertex="1">
+          <mxGeometry y="25" width="150" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="10" value="Carte_Dans_Deck" style="swimlane" parent="1" vertex="1">
+          <mxGeometry x="550" y="200" width="200" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="11" value="ID_Deck (FK)&#xa;ID_Carte (FK)&#xa;Quantite" parent="10" vertex="1">
+          <mxGeometry y="30" width="200" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="13" parent="1" source="6" target="BlxNrHbiSWlKl8deiEyq-23" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="14" parent="1" source="BlxNrHbiSWlKl8deiEyq-23" target="8" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="16" parent="1" source="8" target="BlxNrHbiSWlKl8deiEyq-22" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="17" parent="1" source="BlxNrHbiSWlKl8deiEyq-22" target="10" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="18" style="" parent="1" source="BlxNrHbiSWlKl8deiEyq-22" target="2" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="19" value="Supprimer Carte" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="400" y="210" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="20" parent="1" source="10" target="19" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="21" parent="1" source="19" target="2" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BlxNrHbiSWlKl8deiEyq-22" value="Ajouter Carte" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="370" y="290" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BlxNrHbiSWlKl8deiEyq-23" value="Créer un Deck" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="250" y="480" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BlxNrHbiSWlKl8deiEyq-26" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.32;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="3" target="5" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="240" as="sourcePoint" />
+            <mxPoint x="440" y="190" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DeLmwCM3EVY96BffTBmT-21" value="Partie" style="swimlane" vertex="1" parent="1">
+          <mxGeometry x="60" y="900" width="180" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="DeLmwCM3EVY96BffTBmT-22" value="ID_Partie (PK)&#xa;Date&#xa;server&#xa;ID_Vainqueur (FK)" vertex="1" parent="DeLmwCM3EVY96BffTBmT-21">
+          <mxGeometry y="30" width="180" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="DeLmwCM3EVY96BffTBmT-23" value="lancé une partie" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="770" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="DeLmwCM3EVY96BffTBmT-26" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="7" target="DeLmwCM3EVY96BffTBmT-39">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="300" y="760" as="sourcePoint" />
+            <mxPoint x="190" y="700" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DeLmwCM3EVY96BffTBmT-27" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.334;entryY=-0.01;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="DeLmwCM3EVY96BffTBmT-23" target="DeLmwCM3EVY96BffTBmT-21">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="310" y="770" as="sourcePoint" />
+            <mxPoint x="360" y="720" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DeLmwCM3EVY96BffTBmT-28" value="draw phase" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="300" y="1240" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="DeLmwCM3EVY96BffTBmT-29" value="main phase" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="510" y="1240" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="DeLmwCM3EVY96BffTBmT-30" value="battle phase" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="715" y="1240" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="DeLmwCM3EVY96BffTBmT-31" value="end phase" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1180" y="1240" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="DeLmwCM3EVY96BffTBmT-32" edge="1" parent="1" source="DeLmwCM3EVY96BffTBmT-28" target="DeLmwCM3EVY96BffTBmT-29">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="DeLmwCM3EVY96BffTBmT-34" edge="1" parent="1" source="DeLmwCM3EVY96BffTBmT-30" target="DeLmwCM3EVY96BffTBmT-37">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="DeLmwCM3EVY96BffTBmT-37" value="main phase 2" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="940" y="1240" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="DeLmwCM3EVY96BffTBmT-38" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.996;exitY=0.908;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="DeLmwCM3EVY96BffTBmT-48" target="DeLmwCM3EVY96BffTBmT-31">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="590" y="1090" as="sourcePoint" />
+            <mxPoint x="640" y="1040" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DeLmwCM3EVY96BffTBmT-39" value="choisir un deck" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="67.5" y="650" width="105" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="DeLmwCM3EVY96BffTBmT-40" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" target="DeLmwCM3EVY96BffTBmT-23">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="120" y="723" as="sourcePoint" />
+            <mxPoint x="420" y="790" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DeLmwCM3EVY96BffTBmT-41" value="Joueur_Dans_Partie" style="swimlane" vertex="1" parent="1">
+          <mxGeometry x="300" y="920" width="200" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="DeLmwCM3EVY96BffTBmT-42" value="ID_Partie (FK)&#xa;ID_Membre (FK)&#xa;Points_Vie&#xa;Role&#xa;Actions" vertex="1" parent="DeLmwCM3EVY96BffTBmT-41">
+          <mxGeometry y="30" width="200" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="DeLmwCM3EVY96BffTBmT-43" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.44;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="DeLmwCM3EVY96BffTBmT-22">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="250" y="1070" as="sourcePoint" />
+            <mxPoint x="300" y="1020" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DeLmwCM3EVY96BffTBmT-47" value="Joueur_du_tour" style="swimlane" vertex="1" parent="1">
+          <mxGeometry x="570" y="920" width="200" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="DeLmwCM3EVY96BffTBmT-48" value="ID_Partie (FK)&#xa;ID_Membre (FK)&#xa;Points_Vie&#xa;Actions&#xa;phase" vertex="1" parent="DeLmwCM3EVY96BffTBmT-47">
+          <mxGeometry y="30" width="200" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="DeLmwCM3EVY96BffTBmT-49" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.388;exitY=1.03;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.643;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="DeLmwCM3EVY96BffTBmT-48" target="DeLmwCM3EVY96BffTBmT-28">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="640" y="1160" as="sourcePoint" />
+            <mxPoint x="690" y="1110" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DeLmwCM3EVY96BffTBmT-50" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.713;exitY=0.014;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.431;entryY=1.023;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="DeLmwCM3EVY96BffTBmT-29" target="DeLmwCM3EVY96BffTBmT-48">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="640" y="1160" as="sourcePoint" />
+            <mxPoint x="690" y="1110" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DeLmwCM3EVY96BffTBmT-51" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.714;exitY=1.03;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.393;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="DeLmwCM3EVY96BffTBmT-48" target="DeLmwCM3EVY96BffTBmT-30">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="640" y="1160" as="sourcePoint" />
+            <mxPoint x="690" y="1110" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DeLmwCM3EVY96BffTBmT-55" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.429;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.786;entryY=1.001;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="DeLmwCM3EVY96BffTBmT-37" target="DeLmwCM3EVY96BffTBmT-48">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="640" y="1160" as="sourcePoint" />
+            <mxPoint x="690" y="1110" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DeLmwCM3EVY96BffTBmT-56" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.988;exitY=0.608;exitDx=0;exitDy=0;exitPerimeter=0;entryX=-0.011;entryY=0.587;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="DeLmwCM3EVY96BffTBmT-42" target="DeLmwCM3EVY96BffTBmT-48">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="690" y="1140" as="sourcePoint" />
+            <mxPoint x="740" y="1090" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DeLmwCM3EVY96BffTBmT-57" value="tour_de_l&#39;adversaire" style="swimlane" vertex="1" parent="1">
+          <mxGeometry x="320" y="1450" width="200" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="DeLmwCM3EVY96BffTBmT-58" value="ID_Partie (FK)&#xa;ID_Membre (FK)&#xa;Points_Vie&#xa;Role&#xa;Actions" vertex="1" parent="DeLmwCM3EVY96BffTBmT-57">
+          <mxGeometry y="30" width="200" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="DeLmwCM3EVY96BffTBmT-59" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.385;exitY=1.06;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1;entryY=0.833;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="DeLmwCM3EVY96BffTBmT-31" target="DeLmwCM3EVY96BffTBmT-58">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="710" y="1450" as="sourcePoint" />
+            <mxPoint x="760" y="1400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DeLmwCM3EVY96BffTBmT-60" value="" style="endArrow=classic;html=1;rounded=0;exitX=-0.012;exitY=0.148;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.357;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="DeLmwCM3EVY96BffTBmT-57" target="DeLmwCM3EVY96BffTBmT-28">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="710" y="1450" as="sourcePoint" />
+            <mxPoint x="760" y="1400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DeLmwCM3EVY96BffTBmT-61" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.695;entryY=-0.007;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="DeLmwCM3EVY96BffTBmT-29" target="DeLmwCM3EVY96BffTBmT-57">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="710" y="1450" as="sourcePoint" />
+            <mxPoint x="760" y="1400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DeLmwCM3EVY96BffTBmT-62" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.95;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="DeLmwCM3EVY96BffTBmT-57" target="DeLmwCM3EVY96BffTBmT-30">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="710" y="1450" as="sourcePoint" />
+            <mxPoint x="760" y="1400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DeLmwCM3EVY96BffTBmT-63" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.281;exitY=0.923;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1.008;entryY=0.035;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="DeLmwCM3EVY96BffTBmT-37" target="DeLmwCM3EVY96BffTBmT-58">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="710" y="1450" as="sourcePoint" />
+            <mxPoint x="760" y="1400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DeLmwCM3EVY96BffTBmT-64" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.974;exitY=1.006;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.643;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="DeLmwCM3EVY96BffTBmT-58" target="DeLmwCM3EVY96BffTBmT-31">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="625" y="1620" as="sourcePoint" />
+            <mxPoint x="675" y="1570" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DeLmwCM3EVY96BffTBmT-65" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.429;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1.009;entryY=0.444;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="DeLmwCM3EVY96BffTBmT-31" target="DeLmwCM3EVY96BffTBmT-48">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="700" y="1370" as="sourcePoint" />
+            <mxPoint x="800" y="1370" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DeLmwCM3EVY96BffTBmT-67" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="DeLmwCM3EVY96BffTBmT-30" target="DeLmwCM3EVY96BffTBmT-72">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="820" y="1240" as="sourcePoint" />
+            <mxPoint x="1110" y="1040" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DeLmwCM3EVY96BffTBmT-71" value="fin_de_partie" style="swimlane" vertex="1" parent="1">
+          <mxGeometry x="1060" y="880" width="200" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="DeLmwCM3EVY96BffTBmT-72" value="ID_Partie (FK)&#xa;ID_Membre (FK)&#xa;Points_Vie_0&#xa;ID_Vainqueur (FK)" vertex="1" parent="DeLmwCM3EVY96BffTBmT-71">
+          <mxGeometry y="30" width="200" height="120" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
